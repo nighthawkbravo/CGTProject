@@ -14,7 +14,7 @@ public class Graph {
         nodes = new ArrayList<Node>();
     }
 
-    private Node FindById(int id)
+    public Node FindById(int id)
     {
         for(int i=0; i<nodes.size(); ++i)
         {

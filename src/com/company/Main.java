@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-
+        Colorer c = new Colorer();
         Graph g = new Graph(8);
 
         g.AddNode(new Node(4));
@@ -53,6 +53,6 @@ public class Main {
         g.AddManyEdges(7,l8);
 
         g.Print();
-
+        c.LargestFirst(g);
     }
 }
