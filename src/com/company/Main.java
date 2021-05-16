@@ -52,7 +52,14 @@ public class Main {
         g.AddManyEdges(6,l7);
         g.AddManyEdges(7,l8);
 
+
+        Graph g1 = g;
+
         g.Print();
         c.LargestFirst(g);
+
+        g1.Print();
+        c.DSatur(g1);
+
     }
 }
