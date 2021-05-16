@@ -67,7 +67,7 @@ public class Colorer {
         for(int i=0; i<g.nodes.size();++i)
         {
             int n = g.nodes.get(i).neighbors.size();
-            if (n<=maxDeg) minDeg = n;
+            if (n<=minDeg) minDeg = n;
         }
 
         for(int j=minDeg; j<=maxDeg;++j)

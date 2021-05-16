@@ -53,7 +53,7 @@ public class Main {
         g.AddManyEdges(7,l8);
 
         //g.Print();
-        //c.LargestFirst(g);
+        c.LargestFirst(g);
 
         Graph g2 = new Graph(8);
 
@@ -99,7 +99,7 @@ public class Main {
         g2.AddManyEdges(15,l8);
 
         //g2.Print();
-        //c.LargestFirst(g2);
+        c.LargestFirst(g2);
 
         Graph g3 = new Graph(5);
 
@@ -119,7 +119,7 @@ public class Main {
         g3.AddEdge(19,16);
         g3.AddEdge(20,16);
 
-        g3.Print();
+        //g3.Print();
         c.LargestFirst(g3);
 
     }
