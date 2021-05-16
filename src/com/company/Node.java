@@ -48,7 +48,7 @@ public class Node {
         for(i=0;i<neighbors.size()-1;++i) {
             System.out.print(neighbors.get(i).myId+", ");
         }
-        if(i != 0) System.out.print(neighbors.get(i).myId);
+        System.out.print(neighbors.get(i).myId);
         System.out.println();
     }
 

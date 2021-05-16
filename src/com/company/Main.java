@@ -98,7 +98,29 @@ public class Main {
         g2.AddManyEdges(14,l7);
         g2.AddManyEdges(15,l8);
 
-        g2.Print();
-        c.LargestFirst(g2);
+        //g2.Print();
+        //c.LargestFirst(g2);
+
+        Graph g3 = new Graph(5);
+
+        g3.AddNode(new Node(4));
+        l1.clear();
+        l1.add(17); l1.add(18); l1.add(19); l1.add(20);
+
+
+        g3.AddNode(new Node(1));
+        g3.AddNode(new Node(1));
+        g3.AddNode(new Node(1));
+        g3.AddNode(new Node(1));
+
+        g3.AddManyEdges(16, l1);
+        g3.AddEdge(17,16);
+        g3.AddEdge(18,16);
+        g3.AddEdge(19,16);
+        g3.AddEdge(20,16);
+
+        g3.Print();
+        c.LargestFirst(g3);
+
     }
 }
