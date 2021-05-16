@@ -58,18 +58,24 @@ public class Colorer {
     {
         List<Integer> orderOfColoring = new ArrayList<Integer>();
         int maxDeg = 0;
+        int minDeg = 0;
         for(int i=0; i<g.nodes.size();++i)
         {
             int n = g.nodes.get(i).neighbors.size();
             if (n>=maxDeg) maxDeg = n;
         }
+        for(int i=0; i<g.nodes.size();++i)
+        {
+            int n = g.nodes.get(i).neighbors.size();
+            if (n<=maxDeg) minDeg = n;
+        }
 
-        for(int j=0; j<=maxDeg;++j)
+        for(int j=minDeg; j<=maxDeg;++j)
         {
             for(int i=0; i<g.nodes.size();++i)
             {
                 int n = g.nodes.get(i).neighbors.size();
-                if (n == j) orderOfColoring.add(i);
+                if (n == j) orderOfColoring.add(g.nodes.get(i).myId);
             }
         }
         Collections.reverse(orderOfColoring);

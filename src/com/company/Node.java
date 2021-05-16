@@ -15,7 +15,7 @@ public class Node {
     {
         myId = id++;
         color = 0;
-        numOfNeighbors = n;
+        numOfNeighbors = 0;
         neighbors = new ArrayList<Node>();
     }
 

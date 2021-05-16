@@ -9,7 +9,7 @@ public class Graph {
 
     public Graph(int n)
     {
-        numOfVertices = n;
+        numOfVertices = 0;
         myId = graphIds++;
         nodes = new ArrayList<Node>();
     }
@@ -129,14 +129,26 @@ public class Graph {
 
     public void Print()
     {
-        System.out.println("+----------------------+");
-        System.out.println("Graph Id: "+myId + " Nodes: ");
+        //System.out.println("+----------------------+");
         System.out.println();
+        System.out.println("Graph Id: "+myId + " - Chromatic Number: "+ (ChromaticNum()+1));
+        System.out.println();
+        System.out.println("-- Nodes -- ");
         for(int i=0;i<nodes.size();++i)
         {
             nodes.get(i).Print();
         }
         System.out.println("+----------------------+");
+    }
+
+    private int ChromaticNum()
+    {
+        int max = 0;
+        for(int i=0;i<nodes.size();++i)
+        {
+            if(nodes.get(i).color >= max) max = nodes.get(i).color;
+        }
+        return max;
     }
 
 }
