@@ -6,12 +6,14 @@ public class Graph {
     public final int myId;
     public int numOfVertices;
     public List<Node> nodes;
+    public List<Node> coloredNodes;
 
     public Graph(int n)
     {
         numOfVertices = 0;
         myId = graphIds++;
         nodes = new ArrayList<Node>();
+        coloredNodes = new ArrayList<Node>();
     }
 
     public Node FindById(int id)

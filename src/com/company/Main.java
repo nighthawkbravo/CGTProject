@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        Colorer c = new Colorer();
+        Colorer c = new Colorer(5);
         Graph g = new Graph(8);
 
         g.AddNode(new Node(4));
