@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        Colorer c = new Colorer(5);
+        Colorer c = new Colorer(3);
         Graph g = new Graph(8);
 
         g.AddNode(new Node(4));
@@ -52,7 +52,6 @@ public class Main {
         g.AddManyEdges(6,l7);
         g.AddManyEdges(7,l8);
 
-        //g.Print();
         c.LargestFirst(g);
 
         Graph g2 = new Graph(8);
@@ -98,7 +97,6 @@ public class Main {
         g2.AddManyEdges(14,l7);
         g2.AddManyEdges(15,l8);
 
-        //g2.Print();
         c.LargestFirst(g2);
 
         Graph g3 = new Graph(5);
@@ -119,8 +117,161 @@ public class Main {
         g3.AddEdge(19,16);
         g3.AddEdge(20,16);
 
-        //g3.Print();
         c.LargestFirst(g3);
 
+
+
+        Graph g4 = new Graph(5);
+
+        g4.AddNode(new Node(3));
+        l1.clear();
+        l1.add(23); l1.add(24); l1.add(25);
+
+        g4.AddNode(new Node(3));
+        l2.clear();
+        l2.add(23); l2.add(24); l2.add(25);
+
+        g4.AddNode(new Node(2));
+        l3.clear();
+        l3.add(21); l3.add(22);
+
+        g4.AddNode(new Node(2));
+        l4.clear();
+        l4.add(21); l4.add(22);
+
+        g4.AddNode(new Node(2));
+        l5.clear();
+        l5.add(21); l5.add(22);
+
+        g4.AddManyEdges(21, l1);
+        g4.AddManyEdges(22, l2);
+        g4.AddManyEdges(23, l3);
+        g4.AddManyEdges(24, l4);
+        g4.AddManyEdges(25, l5);
+
+        c.LargestFirst(g4);
+
+
+
+
+        Graph g5 = new Graph(5);
+
+        g5.AddNode(new Node(2));
+        l1.clear();
+        l1.add(27); l1.add(28);
+
+        g5.AddNode(new Node(2));
+        l2.clear();
+        l2.add(26); l2.add(28);
+
+        g5.AddNode(new Node(2));
+        l3.clear();
+        l3.add(26); l3.add(27);
+
+        g5.AddNode(new Node(1));
+        g5.AddNode(new Node(1));
+
+
+        g5.AddManyEdges(26, l1);
+        g5.AddManyEdges(27, l2);
+        g5.AddManyEdges(28, l3);
+
+        g5.AddEdge(29,30);
+
+        c.LargestFirst(g5);
+
+
+        Graph g6 = new Graph(6);
+
+        g6.AddNode(new Node(2));
+        g6.AddNode(new Node(3));
+        g6.AddNode(new Node(1));
+        g6.AddNode(new Node(1));
+        g6.AddNode(new Node(2));
+        g6.AddNode(new Node(1));
+
+
+        g6.AddEdge(31,35);
+        g6.AddEdge(31,32);
+        g6.AddEdge(32,33);
+        g6.AddEdge(32,34);
+        g6.AddEdge(35,36);
+
+        //g3.Print();
+        c.LargestFirst(g6);
+
+
+
+        Graph g7 = new Graph(8);
+
+        g7.AddNode(new Node(1));
+        g7.AddNode(new Node(1));
+        g7.AddNode(new Node(1));
+        g7.AddNode(new Node(4));
+        g7.AddNode(new Node(4));
+        g7.AddNode(new Node(1));
+        g7.AddNode(new Node(1));
+        g7.AddNode(new Node(1));
+
+
+        g7.AddEdge(37,40);
+        g7.AddEdge(38,40);
+        g7.AddEdge(39,40);
+        g7.AddEdge(40,41);
+        g7.AddEdge(41,42);
+        g7.AddEdge(41,43);
+        g7.AddEdge(41,44);
+
+        //g3.Print();
+        c.LargestFirst(g7);
+
+
+        Graph g8 = new Graph(5);
+
+        g8.AddNode(new Node(4));
+        l1.clear();
+        l1.add(46); l1.add(47); l1.add(48); l1.add(49);
+
+        g8.AddNode(new Node(4));
+        l2.clear();
+        l2.add(45); l2.add(47); l2.add(48); l2.add(49);
+
+        g8.AddNode(new Node(4));
+        l3.clear();
+        l3.add(45); l3.add(46); l3.add(48); l3.add(49);
+
+        g8.AddNode(new Node(4));
+        l4.clear();
+        l4.add(45); l4.add(46); l4.add(47); l4.add(49);
+
+        g8.AddNode(new Node(4));
+        l5.clear();
+        l5.add(45); l5.add(46); l5.add(47); l5.add(48);
+
+        g8.AddManyEdges(45, l1);
+        g8.AddManyEdges(46, l2);
+        g8.AddManyEdges(47, l3);
+        g8.AddManyEdges(48, l4);
+        g8.AddManyEdges(49, l5);
+
+        c.LargestFirst(g8);
+
+
+        Graph g9 = new Graph(5);
+
+        g9.AddNode(new Node(1));
+        g9.AddNode(new Node(3));
+        g9.AddNode(new Node(2));
+        g9.AddNode(new Node(3));
+        g9.AddNode(new Node(1));
+
+
+        g9.AddEdge(50,51);
+        g9.AddEdge(51,52);
+        g9.AddEdge(51,53);
+        g9.AddEdge(52,53);
+        g9.AddEdge(53,54);
+
+        c.LargestFirst(g9);
     }
 }

@@ -133,7 +133,8 @@ public class Graph {
     {
         //System.out.println("+----------------------+");
         System.out.println();
-        System.out.println("Graph Id: "+myId + " - Chromatic Number: "+ (ChromaticNum()+1));
+        //System.out.println("Graph Id: "+myId + " - Chromatic Number: "+ (ChromaticNum()+1));
+        System.out.println("Graph Id: "+myId);
         System.out.println();
         System.out.println("-- Nodes -- ");
         for(int i=0;i<nodes.size();++i)

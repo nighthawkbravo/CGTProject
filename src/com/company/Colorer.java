@@ -15,11 +15,6 @@ public class Colorer {
         colorsUsed.add(1);
     }
 
-    private boolean condition(Node v, Node u)
-    {
-        return false;
-    }
-
     private Queue<Queue<Node>> DeepQCopy(Queue<Queue<Node>> queue)
     {
         Queue<Queue<Node>> out = new ArrayDeque<>();
@@ -96,11 +91,13 @@ public class Colorer {
                 }
                 for(int i=0; i<g.coloredNodes.size(); ++i)
                 {
-                    if(Math.abs(n.color - g.coloredNodes.get(i).color) < k-distance(n, g.coloredNodes.get(i), g))
-                    {
-                        n.color = color++;
-                        contFlag = false;
-                        if(!colorsUsed.contains(n.color)) colorsUsed.add(n.color);
+                    int d = distance(n, g.coloredNodes.get(i), g);
+                    if(d>0) {
+                        if (Math.abs(n.color - g.coloredNodes.get(i).color) < k - d) {
+                            n.color = color++;
+                            contFlag = false;
+                            if (!colorsUsed.contains(n.color)) colorsUsed.add(n.color);
+                        }
                     }
                 }
                 contFlag = false;
@@ -115,10 +112,12 @@ public class Colorer {
                 }
                 for(int i=0; i<g.coloredNodes.size(); ++i)
                 {
-                    if(Math.abs(n.color - g.coloredNodes.get(i).color) < k-distance(n, g.coloredNodes.get(i), g))
-                    {
-                        contFlag = true;
-                        break;
+                    int d = distance(n, g.coloredNodes.get(i), g);
+                    if(d>0) {
+                        if (Math.abs(n.color - g.coloredNodes.get(i).color) < k - d) {
+                            contFlag = true;
+                            break;
+                        }
                     }
                 }
             }

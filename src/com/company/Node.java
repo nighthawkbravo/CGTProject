@@ -43,12 +43,17 @@ public class Node {
 
     public void Print()
     {
-        System.out.print("Node Id: " + myId + " - Color Id: " + (color+1) + " - Neighbor Ids: ");
-        int i;
-        for(i=0;i<neighbors.size()-1;++i) {
-            System.out.print(neighbors.get(i).myId+", ");
+        if(neighbors.size() > 0) {
+            System.out.print("Node Id: " + myId + " - Color Id: " + (color + 1) + " - Neighbor Ids: ");
+            int i;
+            for (i = 0; i < neighbors.size() - 1; ++i) {
+                System.out.print(neighbors.get(i).myId + ", ");
+            }
+            System.out.print(neighbors.get(i).myId);
         }
-        System.out.print(neighbors.get(i).myId);
+        else {
+            System.out.print("Node Id: " + myId + " - Color Id: " + (color + 1));
+        }
         System.out.println();
     }
 
