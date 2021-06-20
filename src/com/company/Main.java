@@ -304,5 +304,48 @@ public class Main {
 
         c.LargestFirst(g10);
 
+        Graph g11 = new Graph(16);
+
+        g11.AddNode(new Node(2));
+        g11.AddNode(new Node(3));
+        g11.AddNode(new Node(2));
+        g11.AddNode(new Node(3));
+        g11.AddNode(new Node(2));
+        g11.AddNode(new Node(3));
+        g11.AddNode(new Node(2));
+        g11.AddNode(new Node(3)); // inner circle
+
+        g11.AddNode(new Node(3));
+        g11.AddNode(new Node(2));
+        g11.AddNode(new Node(2));
+        g11.AddNode(new Node(2));
+        g11.AddNode(new Node(3));
+        g11.AddNode(new Node(2));
+        g11.AddNode(new Node(2));
+        g11.AddNode(new Node(2)); // outer circle
+
+        g11.AddEdge(74,67);
+        g11.AddEdge(67,68);
+        g11.AddEdge(68,69);
+        g11.AddEdge(68,75);
+        g11.AddEdge(69,70);
+        g11.AddEdge(70,74);
+        g11.AddEdge(70,71);
+        g11.AddEdge(71,72);
+        g11.AddEdge(72,79);
+        g11.AddEdge(72,73);
+        g11.AddEdge(73,74); // inner circle
+
+        g11.AddEdge(75,76);
+        g11.AddEdge(76,77);
+        g11.AddEdge(77,78);
+        g11.AddEdge(78,79);
+        g11.AddEdge(79,80);
+        g11.AddEdge(80,81);
+        g11.AddEdge(81,82);
+        g11.AddEdge(82,75); // outer circle
+
+        c.LargestFirst(g11);
+
     }
 }
