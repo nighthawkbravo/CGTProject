@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        Colorer c = new Colorer(3);
+        Colorer c = new Colorer(5);
         Graph g = new Graph(8);
 
         g.AddNode(new Node(4));
@@ -273,5 +273,36 @@ public class Main {
         g9.AddEdge(53,54);
 
         c.LargestFirst(g9);
+
+        // Large Graphs
+
+        Graph g10 = new Graph(12);
+
+        g10.AddNode(new Node(2)); // 55
+        g10.AddNode(new Node(4));
+        g10.AddNode(new Node(5));
+        g10.AddNode(new Node(4));
+        g10.AddNode(new Node(3));
+        g10.AddNode(new Node(2));
+        g10.AddNode(new Node(4));
+        g10.AddNode(new Node(4));
+        g10.AddNode(new Node(4));
+        g10.AddNode(new Node(4));
+        g10.AddNode(new Node(3));
+        g10.AddNode(new Node(3)); // 66
+
+        g10.AddEdge(55,57);        g10.AddEdge(55,56);
+        g10.AddEdge(56,57);        g10.AddEdge(56,59);        g10.AddEdge(56,61);
+        g10.AddEdge(57,59);        g10.AddEdge(57,60);        g10.AddEdge(57,58);
+        g10.AddEdge(58,61);        g10.AddEdge(58,62);        g10.AddEdge(58,64);
+        g10.AddEdge(59,61);        g10.AddEdge(60,62);
+        g10.AddEdge(61,62);
+        g10.AddEdge(62,63);
+        g10.AddEdge(63,64);        g10.AddEdge(63,65);        g10.AddEdge(63,66);
+        g10.AddEdge(64,65);        g10.AddEdge(64,66);
+        g10.AddEdge(65,66);
+
+        c.LargestFirst(g10);
+
     }
 }

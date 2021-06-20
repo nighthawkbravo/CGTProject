@@ -44,7 +44,7 @@ public class Node {
     public void Print()
     {
         if(neighbors.size() > 0) {
-            System.out.print("Node Id: " + myId + " - Color Id: " + (color + 1) + " - Neighbor Ids: ");
+            System.out.print("Node Id: " + myId + " - Color Id: " + (color) + " - Neighbor Ids: ");
             int i;
             for (i = 0; i < neighbors.size() - 1; ++i) {
                 System.out.print(neighbors.get(i).myId + ", ");
